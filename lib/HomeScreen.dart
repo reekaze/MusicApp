@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:test_1/SongArguments.dart';
 import 'package:test_1/data/SingerList.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,7 +14,9 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   pushSongScreen(var i) {
-    Navigator.pushNamed(context, '/SongScreen', arguments: i);
+    Navigator.pushNamed(context, '/SongScreen',
+        arguments: SongArguments(
+            name: i['name'], title: i['title'], image: i['image']));
   }
 
   @override
@@ -245,7 +248,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Icon(
                         Icons.play_arrow,
                         color: Colors.white,
-                        size: 32,
+                        size: 26,
                       ),
                     ),
                     onTap: () => pushSongScreen(i),
