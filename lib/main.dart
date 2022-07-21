@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => DefaultApp(),
-        "/SongScreen": (context) => SongScreen()
+        "/SongScreen": (context) => SongScreen(),
       },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
