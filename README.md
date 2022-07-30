@@ -1,6 +1,4 @@
-# test_1
-
-A new Flutter project.
+# Simple offline music player app
 
 ## Getting Started
 
